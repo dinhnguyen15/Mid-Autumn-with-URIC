@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mid-Autumn with URIC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body title="Giữ vào cán đèn ông sao để cầm lấy rồi cùng đi rước đèn nhé!">
+    <div class="loiChuc">Trung thu là Tết đoàn viên, là Tết của tình thân, là Tết của các bé thiếu nhi.
+        <br>
+        Kính chúc Ông/bà, Bố/mẹ, Cô/dì, Chú/bác, Anh/chị/em, bạn bè và mọi người đón Tết Trung thu thật vui vẻ và ấm áp bên những người thân iu ạ. <p>- Chú cuội <a href="https://www.facebook.com/dinh.nguyen.1501" target="_blank">A Nô</a></p></div>
+    <div class="listStar">
+        <div class="star-five"></div>
+        <div class="star-five"></div>
+        <div class="star-five"></div>
+        <div class="star-five"></div>
+        <div class="star-five"></div>
+        <div class="star-five"></div>
+        <div class="star-five"></div>
+        <div class="star-five"></div>
+        <div class="star-five"></div>
+        <div class="star-five"></div>
+        <div class="star-five"></div>
+        <div class="star-five"></div>
+        <div class="star-five"></div>
+        <div class="star-five"></div>
+        <div class="star-five"></div>
+        <div class="star-five"></div>
+        <div class="star-five"></div>
+        <div class="star-five"></div>
+    </div>
+
+    <div class="hoiRuocDen">
+        <div class="person">
+            <div class="heart"></div>
+        </div>
+        <div class="person">
+            <div class="trangKhuyet"></div>
+        </div>
+        <div class="person">
+            <div class="facebook-icon"></div>
+        </div>
+        <div class="person">
+            <div class="trangKhuyet"></div>
+        </div>
+        <div class="person">
+            <div class="pacman"></div>
+        </div>
+        <div class="person">
+            <div class="burst-8"></div>
+        </div>
+    </div>
+    <div id="starLight">
+        <div class="light"></div>
+        <div class="starLightStick"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="moon"><img src="img/chucuoi.jpg"></div>
+    <script>
+        var audio = new Audio('../audio/trungthu.mp3');
+        var star = document.querySelector("body");
+        star.addEventListener('click',function () {
+            audio.play();
+            document.querySelector(".hoiRuocDen").style.animation = "diNao 40s alternate infinite linear";
+        })
+
+        var star = document.querySelectorAll(".listStar .star-five");
+
+        for (let index = 0; index < star.length; index++) {
+            star[index].style.top = Math.floor(Math.random() * 200) + "px";
+            star[index].style.left = Math.floor(Math.random() * 2000) + "px";
+            setInterval(() => {
+                star[index].style.top = Math.floor(Math.random() * 200) + "px";
+                star[index].style.left = Math.floor(Math.random() * 2000) + "px";
+            }, 7000);
+        }
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>
